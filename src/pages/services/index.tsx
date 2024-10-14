@@ -5,7 +5,7 @@ import ServiceCard from '@/components/ServiceCard';
 const ServicesPage = () => {
   return (
     <>
-      <Navbar />
+      
       <main className="container mx-auto p-4">
         <h1 className="text-2xl font-bold">Our Services</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
@@ -14,7 +14,6 @@ const ServicesPage = () => {
           <ServiceCard title="Service 3" description="Detailed description of service 3" />
         </div>
       </main>
-      <Footer />
     </>
   );
 };

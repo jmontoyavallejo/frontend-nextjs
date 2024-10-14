@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-cover bg-center min-h-screen flex items-center" style={{backgroundImage: "url('/images/heroSection.jpg')"}}>
+    <section className="relative bg-cover bg-center min-h-screen flex items-center mt-16 sm:mt-20 md:mt-24 lg:mt-20 pt-8 sm:pt-10 md:pt-12 lg:pt-16" style={{backgroundImage: "url('/images/heroSection.jpg')"}}>
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl text-left ml-0 sm:ml-8 lg:ml-16">
