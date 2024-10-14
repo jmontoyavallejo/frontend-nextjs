@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 
 const InsightCard = ({ title, description, imageSrc }: { title: string; description: string; imageSrc: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center">
-    <Image src={imageSrc} alt={title} width={300} height={200} className="rounded-lg mb-4 md:mb-0 md:mr-6" />
-    <div>
+  <div className="bg-white rounded-lg overflow-hidden">
+    <Image src={imageSrc} alt={title} width={600} height={400} className="w-full object-cover h-64" />
+    <div className="p-6">
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
@@ -19,7 +19,7 @@ const Insights = () => {
           Todo lo que hacemos pa' que tu marca crezca<br />
           y destaque
         </h2>
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <InsightCard
             title="Investigación de Mercados"
             description="Te ayudamos a entender lo que realmente quieren tus clientes. Definí tu reto y nosotros hacemos el análisis completo, usando técnicas de investigación avanzadas. Nada de adivinanzas, solo datos concretos para que tomes decisiones seguras y potencies tu negocio."

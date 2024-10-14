@@ -1,45 +1,51 @@
 import React from 'react';
 import Image from 'next/image'; // Import Image from Next.js for optimized images
 
+const BlogPost = ({ imageSrc, date, author, title }: { imageSrc: string; date: string; author: string; title: string }) => (
+  <div className="bg-white rounded-lg overflow-hidden shadow-md">
+    <Image 
+      src={imageSrc} 
+      alt={title} 
+      width={600} 
+      height={400} 
+      className="w-full object-cover h-48"
+    />
+    <div className="p-4">
+      <p className="text-sm text-gray-600 mb-1">{date}</p>
+      <p className="text-sm text-gray-600 mb-2">Por: {author}</p>
+      <h2 className="text-xl font-semibold">{title}</h2>
+    </div>
+  </div>
+);
+
 const BlogSection = () => {
   return (
-    <div className="blog-section">
-      <h1 className="text-3xl font-bold mb-4">
-        Tips, tendencias y todo lo que necesitas pa’ ir siempre un paso adelante.
-      </h1>
-      <p className="mb-6">
-        No hay lugar para quedarse atrás. Acá compartimos las últimas tendencias, tips y estrategias en experiencia del cliente e investigación de mercados.
-        Encontrá todo lo necesario para que tu marca siga innovando y rompiendo moldes.
-      </p>
-      
-      <div className="blog-posts">
-        <div className="post mb-4">
-          <Image 
-            src="/images/blog-photo-1.jpg" 
-            alt="Blog Post 1" 
-            width={500} // Adjust width as needed
-            height={300} // Adjust height as needed
-            className="mb-2" // Optional: add margin below the image
-          />
-          <p>Fecha de publicación</p>
-          <p>Por: David M.</p>
-          <h2 className="font-semibold">Título 1</h2>
-        </div>
+    <section className="py-16 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-bold text-center mb-4">
+          Tips, tendencias y todo lo que necesitas pa' ir siempre un paso adelante.
+        </h1>
+        <p className="text-center mb-8 max-w-3xl mx-auto">
+          No hay lugar para quedarse atrás. Acá compartimos las últimas tendencias, tips y estrategias en experiencia del cliente e investigación de mercados.
+          Encontrá todo lo necesario para que tu marca siga innovando y rompiendo moldes.
+        </p>
         
-        <div className="post mb-4">
-          <Image 
-            src="/images/blog-photo-2.jpg" 
-            alt="Blog Post 2" 
-            width={500} // Adjust width as needed
-            height={300} // Adjust height as needed
-            className="mb-2" // Optional: add margin below the image
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <BlogPost 
+            imageSrc="/images/blog-photo-1.jpg"
+            date="Fecha de publicación"
+            author="David M."
+            title="Título 1"
           />
-          <p>Fecha de publicación</p>
-          <p>Por: Camila</p>
-          <h2 className="font-semibold">Título 2</h2>
+          <BlogPost 
+            imageSrc="/images/blog-photo-2.jpg"
+            date="Fecha de publicación"
+            author="Camila"
+            title="Título 2"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
