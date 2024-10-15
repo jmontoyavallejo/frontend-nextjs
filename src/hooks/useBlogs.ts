@@ -13,7 +13,8 @@ export const useBlogs = () => {
         const data = await fetchBlogs();
         setBlogs(data);
         setLoading(false);
-      } catch (err) {
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
         setError('Failed to fetch blogs');
         setLoading(false);
       }
@@ -25,7 +26,8 @@ export const useBlogs = () => {
   const getBlogBySlug = async (slug: string) => {
     try {
       return await fetchBlogBySlug(slug);
-    } catch (err) {
+    } catch (error) {
+        console.error('Error fetching blog post:', error);
       setError('Failed to fetch blog post');
       return null;
     }

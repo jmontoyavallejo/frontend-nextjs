@@ -30,7 +30,7 @@ const BlogSection: React.FC = () => {
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mb-8">
-          Tips, tendencias y todo lo que necesitas pa' ir siempre un paso adelante.
+          Tips, tendencias y todo lo que necesitas pa&apos; ir siempre un paso adelante.
         </h1>
         <p className="text-center mb-8 max-w-3xl mx-auto">
           No hay lugar para quedarse atrás. Acá compartimos las últimas tendencias, tips y estrategias en experiencia del cliente e investigación de mercados.

@@ -45,7 +45,7 @@ const BlogPage: React.FC = () => {
     <div className="container mx-auto px-4 py-8 pt-8 mt-16 sm:mt-20 md:mt-24 lg:mt-20">
       <div className="max-w-4xl mx-auto text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-          Tips, tendencias y todo lo que necesitas pa' ir siempre un paso adelante.
+          Tips, tendencias y todo lo que necesitas pa&apos; ir siempre un paso adelante.
         </h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           No hay lugar para quedarse atrás. Acá compartimos las últimas tendencias, tips y estrategias en experiencia del cliente e investigación de mercados.

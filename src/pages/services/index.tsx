@@ -1,5 +1,3 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import ServiceCard from '@/components/ServiceCard';
 
 const ServicesPage = () => {
